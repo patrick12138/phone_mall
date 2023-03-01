@@ -1,4 +1,4 @@
-## 基于Spring Boot和thymeleaf后端模板引擎的仿京东商城，后台基于若依框架修改
+## 基于Spring Boot和thymeleaf后端模板引擎的仿京东商城
 ### 商城技术选型
 
 **操作系统的选择：**
