@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: xwh12138
+    url: jdbc:mysql://localhost:3306/mall?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: phone_mall
+  thymeleaf:
+    cache: false
+  devtools:
+    livereload:
+      port: 35666
+mybatis-plus:
+  mapper-locations: classpath:/maaper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8090

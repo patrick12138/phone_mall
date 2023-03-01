@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>派克商城</title>
+    <link rel="icon" href="/index/img/icon.png" type="/image/x-icon"/>
+    <link rel="stylesheet" href="/index/css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" href="/index/css/GL.css">
+    <script src="/index/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .logo{
+            position: absolute;
+            top: 15px;
+            right: 1080px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="top_find">
+    <div class="top_find_son">
+        <div class="input_find">
+            <input type="text" placeholder="卸妆水"/>
+            <span style="background: url('http://localhost:8090/index/img/img_12.png') 0 -1px;"></span>
+            <a href="#"><img src="/index/img/img_09.png"/></a>
+        </div>
+    </div>
+</div>
+<ul class="left_floor">
+    <li class="left_floor_xiang">享品质</li>
+    <li class="left_floor_fu">服饰美妆</li>
+    <li class="left_floor_jia">家电手机</li>
+    <li class="left_floor_dian">电脑数码</li>
+    <li class="left_floor_3C">3C运动</li>
+    <li class="left_floor_ai">爱吃</li>
+    <li class="left_floor_mu">母婴家居</li>
+    <li class="left_floor_tu">图书汽车</li>
+    <li class="left_floor_you">游戏金融</li>
+    <li class="left_floor_lv">旅行健康</li>
+    <li class="left_floor_hai">还没逛够</li>
+    <li class="left_floor_ding">顶部</li>
+</ul>
+<header>
+    <!--头部-->
+    <div class="header_head">
+        <div class="header_head_box">
+            <a href="#" class="img"></a>
+            <b class="header_head_p">
+                <a href="#">
+                    <img src="/index/img/img_05.png" style="border-radius: 50%;"/>
+                    <!--<span class="glyphicon glyphicon-map-marker"></span>-->
+                    北京</a>
+                <div class="header_head_p_cs">
+                    <a href="#" style="background: #C81623;color: #fff;">北京</a>
+                    <a href="#">上海</a>
+                    <a href="#">天津</a>
+                    <a href="#">重庆</a>
+                    <a href="#">河北</a>
+                    <a href="#">山西</a>
+                    <a href="#">河南</a>
+                    <a href="#">辽宁</a>
+                    <a href="#">吉林</a>
+                    <a href="#">黑龙江</a>
+                    <a href="#">内蒙古</a>
+                    <a href="#">江苏</a>
+                    <a href="#">山东</a>
+                    <a href="#">安徽</a>
+                    <a href="#">浙江</a>
+                    <a href="#">福建</a>
+                    <a href="#">湖北</a>
+                    <a href="#">湖南</a>
+                    <a href="#">广东</a>
+                    <a href="#">广西</a>
+                    <a href="#">江西</a>
+                    <a href="#">四川</a>
+                    <a href="#">海南</a>
+                    <a href="#">贵州</a>
+                    <a href="#">云南</a>
+                    <a href="#">西藏</a>
+                    <a href="#">陕西</a>
+                    <a href="#">甘肃</a>
+                    <a href="#">青海</a>
+                    <a href="#">宁夏</a>
+                    <a href="#">新疆</a>
+                    <a href="#">港澳</a>
+                    <a href="#">台湾</a>
+                    <a href="#">钓鱼岛</a>
+                    <a href="#">海外</a>
+                </div>
+            </b>
+            <ul>
+                <li>
+                    <a href="/logout" th:if="${session.loginUser!=null}">退出</a>
+                    <a th:if="${session.loginUser!=null}">欢迎: [[${session.loginUser==null?'':session.loginUser.username}]]</a>
+                    <a href="/login.html" th:if="${session.loginUser==null}">欢迎,请登录</a>
+                </li>
+                <li>
+                    <a href="/reg.html" class="li_2" th:if="${session.loginUser==null}">免费注册</a>
+                </li>
+                <span>|</span>
+                <li>
+                    <a href="/order.html">我的订单</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--搜索导航-->
+    <div class="header_sous">
+        <div class="logo">
+            <img style="width: 100px;height: 100px" src="/index/img/logo.png">
+        </div>
+        <div class="header_form">
+            <input id="searchText" type="text"/>
+            <a href="#"><img src="/index/img/img_09.png" onclick="search()"/></a>
+        </div>
+    </div>
+</header>
+
+</body>
+
+<script type="text/javascript">
+    function search() {
+        var keyword = $("#searchText").val()
+        window.location.href = "http://localhost:8090/search.html?brandId=0"
+    }
+</script>
+</html>
